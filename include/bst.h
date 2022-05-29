@@ -45,8 +45,8 @@ class BST {
       if (root == nullptr) {
         return 0;
       } else {
-        leftt = depthTree(root -> left);
-        rightt = depthTree(root -> right);
+        leftt = heightTree(root -> left);
+        rightt = heightTree(root -> right);
         if (leftt > rightt) {
           return leftt+1;
         } else {

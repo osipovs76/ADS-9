@@ -13,17 +13,17 @@ BST<std::string> makeTree(const char* filename) {
     std::cout << "File error!" << std::endl;
     return warPeaceTree;
   }
-  std::string text = "";
+  std::string tex = "";
   while (!file.eof()) {
-    text = "";
+    tex = "";
     while (true) {
       char sym = file.get();
       if ((sym >= 65 && sym <= 90) || (sym >= 97 && sym <= 122))
-        text += tolower(sym);
+        tex += tolower(sym);
       else
         break;
     }
-    warPeaceTree.addNode(text);
+    warPeaceTree.addNode(tex);
   }
   file.close();
   return warPeaceTree;

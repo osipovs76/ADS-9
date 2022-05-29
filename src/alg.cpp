@@ -5,9 +5,9 @@
 #include  <cstdlib>
 #include  "bst.h"
 
-BST<std::string> warPeaceTree(const char* filename) {
+BST<std::string> makeTree(const char* filename) {
   // поместите сюда свой код
-  BST<std::string> textTree;
+  BST<std::string> warPeaceTree;
   std::ifstream file(filename);
   if (!file) {
     std::cout << "File error!" << std::endl;

@@ -39,14 +39,14 @@ class BST {
       }
     }
 
-    int heightTree(Node *root) {
+    int depthTree(Node *root) {
       int leftt = 0;
       int rightt = 0;
       if (root == nullptr) {
         return 0;
       } else {
-        leftt = heightTree(root -> left);
-        rightt = heightTree(root -> right);
+        leftt = depthTree(root -> left);
+        rightt = depthTree(root -> right);
         if (leftt > rightt) {
           return leftt+1;
         } else {
@@ -60,8 +60,8 @@ class BST {
     void addNode(const T& data) {
       root = addNode(root, data);
     }
-    int height() {
-      return heightTree(root)-1;
+    int depth() {
+      return depthTree(root)-1;
     }
     int search(const T& data) {
       return searchNode(root, data);
